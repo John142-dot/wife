@@ -1,0 +1,98 @@
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/coastified/src.lua"))()
+local Window = Lib:Window("ui lib", "pro haxxx", Enum.KeyCode.RightShift)
+local Test = Window:Tab("Silent Aimbot")
+
+Test:Toggle('Enabled',function(state)
+    print(state)
+end)
+
+Test:Slider('Fov Size',1,200,75,function(Value)
+    print(Value)
+end)
+
+Test:Colorpicker("Color",Color3.fromRGB(0,0,0), function(color)
+    print(color)
+end)
+
+Test:Dropdown("Part",{'Head',"UpperTorso","HumanoidRootPart","LowerTorso"}, function(objective)
+    print(objective)
+end)
+
+-- Adding five buttons that kick the player
+Test:Button("Button 1", function()
+    game.Players.LocalPlayer:Kick("You have been kicked by Button 1")
+end)
+
+Test:Button("Button 2", function()
+    game.Players.LocalPlayer:Kick("You have been kicked by Button 2")
+end)
+
+Test:Button("Button 3", function()
+    game.Players.LocalPlayer:Kick("You have been kicked by Button 3")
+end)
+
+Test:Button("Button 4", function()
+    game.Players.LocalPlayer:Kick("You have been kicked by Button 4")
+end)
+
+Test:Button("Button 5", function()
+    game.Players.LocalPlayer:Kick("You have been kicked by Button 5")
+end)
+
+-- 2
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreyCaat/GC-Library/main/Lib.txt", true))()
+local main = library:CreateMain("Gui Name", "credits")
+
+local tab = main:CreateTab("mama o' troll hub bebe")
+
+local label = tab:CreateLabel("shit")
+
+local button = tab:CreateButton("Button Name", function()
+    print("Button")
+end)
+
+local line = tab:CreateLine()
+
+local dropdown = tab:CreateDropdown("Dropdown Name")
+
+local dropdownbutton = dropdown:CreateDropdownButton("Button Name", function()
+    print("Button")
+end)
+
+local toggle = tab:CreateToggle("Toggle Name", function(state)
+    if state then
+        print("Im enabled")
+    else
+        print("Im disabled")
+    end
+end)
+
+local slider = tab:CreateSlider("Walkspeed", 16, 400, function(arg)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = arg
+end)
+
+local slider = tab:CreateSlider("JumpPower", 50, 400, function(arg)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = arg
+end)
+
+-- Adding five buttons that kick the player
+tab:CreateButton("Button 1", function()
+    game.Players.LocalPlayer:Kick("You have been kicked by Button 1")
+end)
+
+tab:CreateButton("Button 2", function()
+    game.Players.LocalPlayer:Kick("You have been kicked by Button 2")
+end)
+
+tab:CreateButton("Button 3", function()
+    game.Players.LocalPlayer:Kick("You have been kicked by Button 3")
+end)
+
+tab:CreateButton("Button 4", function()
+    game.Players.LocalPlayer:Kick("You have been kicked by Button 4")
+end)
+
+tab:CreateButton("Button 5", function()
+    game.Players.LocalPlayer:Kick("You have been kicked by Button 5")
+end)
